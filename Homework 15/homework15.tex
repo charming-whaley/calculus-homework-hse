@@ -1,0 +1,71 @@
+\documentclass{article}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{semantic}
+\usepackage[margin=1in]{geometry}
+\usepackage{fancyhdr}
+\usepackage{enumerate}
+\usepackage[shortlabels]{enumitem}
+\usepackage{systeme}
+
+\pagestyle{fancy}
+\fancyhead[L]{Katkov Fedor}
+\fancyhead[C]{Calculus homework 15}
+\fancyhead[R]{\today}
+
+\begin{document}
+
+\section*{Problem 2}
+\subsection*{(a)}
+$$\int(x + 1)(3x - 2)dx = \int(3x^2 + x - 2)dx = 3\cdot\int x^2dx + \int xdx - 2\cdot\int1\cdot dx = $$
+$$ = 3\cdot\frac{x^3}{3} + \frac{x^2}{2} - 2x + C = x^3 + \frac{x^2}{2} - 2x + C.$$
+\subsection*{(b)}
+$$\int\frac{4}{6 + x^2}dx = 4\cdot\int\frac{1}{6 + x^2}dx = 4\cdot\int\frac{1}{x^2 + (\sqrt{6})^2}dx = 4\cdot\frac{1}{\sqrt{6}}\cdot\arctan{(\frac{x}{\sqrt{6}})} + C.$$
+\subsection*{(c)}
+$$\int\frac{\cos{2x}}{\sin^2{x}\cdot\cos^2{x}}dx = \int\frac{\cos^2{x} - \sin^2{x}}{\sin^2{x}\cdot\cos^2{x}} = \int\left(\frac{\cos^2{x}}{\sin^2{x}\cdot\cos^2{x}} - \frac{\sin^2{x}}{\sin^2{x}\cdot\cos^2{x}}\right)dx = $$
+$$= \int\left(\frac{1}{\sin^2{x}} - \frac{1}{\cos^2{x}}\right)dx = \int\frac{1}{\sin^2{x}}dx - \int\frac{1}{\cos^2{x}}dx = - \cot{x} - \tan{x} + C.$$
+\subsection*{(d)}
+$$\int x^{\frac{7}{8}}\cdot(2x^{\frac{3}{5}} - 3x^{-2} + \sqrt{x})dx = \int(2x^{\frac{59}{40}} -3x^{-\frac{9}{8}} + x^{\frac{11}{8}})dx = 2\int x^{\frac{59}{40}}dx - 3\cdot\int x^{-\frac{9}{8}}dx + \int x^{\frac{11}{8}}dx = $$
+$$= \frac{80x^2 x^{\frac{19}{40}}}{99} + \frac{24}{x^{\frac{1}{8}}} + \frac{8x^2x^{\frac{3}{8}}}{19} + C = \frac{80\cdot\sqrt[40]{x^{99}}}{99} + \frac{24}{\sqrt[8]{x}} + \frac{8\cdot\sqrt[8]{x^{19}}}{19} + C.$$
+\subsection*{(e)}
+$$\int\frac{\sqrt{x} - x^3\cdot e^x + x^2}{x^3}dx = \int\left(\frac{\sqrt{x}}{x^3} - e^x + x^{-1}\right)dx = \int x^{-\frac{5}{2}} - \int e^xdx + \int x^{-1}dx = $$
+$$= -\frac{x^{-1,5}}{1,5} - e^x + \ln{x} + C.$$
+\subsection*{(f)}
+$$\int\frac{x\sin{2x} + \sqrt[5]{x^2}\cos{x}}{x\cos{x}}dx = \int\left(\frac{x\cdot2\sin{x}\cos{x}}{x\cos{x}} + \frac{\sqrt[5]{x^2}\cos{x}}{x\cos{x}}\right)dx = \int(2\sin{x} + x^{-0,6})dx = $$
+$$ = 2\cdot\int\sin{x}\cdot dx + \int x^{-0,6}dx = -2\cos{x} + \frac{x^{0,4}}{0,4} + C.$$
+\subsection*{(g)}
+$$\int\frac{\sqrt{3 + x^2} - \sqrt{3 - x^2}}{\sqrt{9 - x^4}}dx = \int\left(\sqrt{\frac{3 + x^2}{(3 - x^2)(3 + x^2)}} - \sqrt{\frac{3 - x^2}{(3 - x^2)(3 + x^2)}}\right)dx = $$
+$$ = \int\left(\sqrt{\frac{1}{3 - x^2}} - \sqrt{\frac{1}{3 + x^2}}\right)dx = \int\left(\frac{1}{\sqrt{3 - x^2}} - \frac{1}{\sqrt{3 + x^2}}\right)dx = \arcsin{\frac{x}{\sqrt{3}}} - \ln{|x + \sqrt{x^2 + 3}|} + C.$$
+\subsection*{(h)}
+$$\int(\tan{x} + \cot{x})^2dx = \int\left(\tan{x} + \frac{1}{\tan{x}}\right)^2dx = \int\left(\tan^2{x} + 2 + \frac{1}{\tan^2{x}}\right)dx = $$
+$$ = \int\tan^2{x} + 2\cdot\int dx + \int\frac{1}{\tan^2{x}}dx = \tan{x} - x + 2x - \cot{x} - x + C = \tan{x} - \cot{x} + C.$$
+\subsection*{(i)}
+$$\int\frac{1 + 2x^2}{x^2(1 + x^2)}dx = \int\left(\frac{1}{x^2} + \frac{1}{1 + x^2}\right)dx = \int\frac{1}{x^2}dx + \int\frac{1}{x^2 + 1}dx = -\frac{1}{x} + \arctan{x} + C.$$
+\section*{Problem 4}
+\subsection*{(a)}
+$$\int\frac{4x + 5}{2x^2 + 5x - 6}dx = \left[t = 2x^2 + 5x - 6,\implies dt = t'dx = (4x + 5)dx\right] = $$
+$$ = \int\frac{dt}{t} = \ln{|t|} + C = \ln{|2x^2 + 5x - 6|} + C.$$
+\subsection*{(b)}
+$$\int\frac{\cos{2x}}{\sin{x}\cdot\cos{x}}dx = \int\left(-\frac{\sin^2{x}}{\sin{x}\cdot\cos{x}} + \frac{\cos^2{x}}{\sin{x}\cdot\cos{x}}\right)dx =$$
+$$ = -1\cdot\int\tan{x}dx + \int\cot{x}dx = \ln{|\cos{x}|} + \ln{|\sin{x}|} + C.$$
+\subsection*{(c)}
+$$\int\frac{x^3}{\sqrt{1 - x^8}}dx = \left[t = x^4,\implies dt = t'dx = 4x^3dx\right] = \int\frac{dt}{4\sqrt{1 - t^2}} = \frac{1}{4}\cdot\int\frac{dt}{\sqrt{1 - t^2}} = $$
+$$ = \frac{1}{4}\cdot\arcsin{t} + C.$$
+\subsection*{(d)}
+$$\int\frac{\arctan{x}}{1 + x^2}dx = \left[t = \arctan{x},\implies dt = t'dx = \frac{1}{1 + x^2}dx\right] = \int tdt = \frac{t^2}{2} + C = \frac{\arctan^2{x}}{2} + C.$$
+\subsection*{(e)}
+$$\int e^{\cos{x}}\cdot\sin{x}dx = \left[t = \cos{x},\implies dt = t'dx = -\sin{x}dx\right] = \int-e^tdt = -e^t + C = -e^{\cos{x}} + C.$$
+\subsection*{(f)}
+$$\int\frac{\cos{\ln{x}}}{x}dx = \left[t = \ln{x},\implies dt = t'dx = \frac{1}{x}dx\right] = \int\cos{t}dt = \sin{t} + C = \sin{\ln{x}} + C.$$
+\newpage
+\section*{Problem 6}
+\subsection*{(a)}
+$$\int e^{7x - 2}dx = \left[t = 7x - 2,\implies dt = t'dx = 7\cdot dx\right] = \int\frac{e^t}{7}dt = \frac{1}{7}\cdot\int e^tdt = \frac{e^{7x - 2}}{7} + C.$$
+\subsection*{(b)}
+$$\int(4 - 3x)^{3,5}dx = \left[t = 4 - 3x,\implies dt = t'dx = -3dx\right] = \int\frac{t^{3,5}}{3}dt = \frac{1}{3}\cdot\int t^{3,5}dt = $$
+$$ = \frac{1}{3}\cdot\frac{t^{4,5}}{4,5} + C = \frac{(4 - 3x)^{4,5}}{13,5} + C.$$
+\subsection*{(c)}
+$$\int\frac{dx}{3 + (2x + 5)^2} = \left[t = 2x + 5,\implies dt = t'dx = 2dx\right] = \int\frac{dt}{2(3 + t^2)} = \frac{1}{2}\cdot\int\frac{dt}{3 + t^2} = \frac{t}{2\sqrt{3}}\cdot\arctan{\frac{t}{\sqrt{3}}} + C = $$
+$$ = \frac{1}{2\sqrt{3}}\cdot\arctan{\frac{2x + 5}{\sqrt{3}}} + C.$$
+\end{document}
