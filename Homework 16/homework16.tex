@@ -1,0 +1,52 @@
+\documentclass{article}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{semantic}
+\usepackage[margin=1in]{geometry}
+\usepackage{fancyhdr}
+\usepackage{enumerate}
+\usepackage[shortlabels]{enumitem}
+\usepackage{systeme}
+
+\pagestyle{fancy}
+\fancyhead[L]{Katkov Fedor}
+\fancyhead[C]{Calculus homework 16}
+\fancyhead[R]{\today}
+
+\begin{document}
+
+\section*{Problem 2}
+\subsection*{(a)}
+$$\int\frac{x^4 + x^3 - x^2 + x + 1}{x^2 + x - 2}dx = \int\frac{x^4 + x^3 - x^2 + x + 1}{(x - 1)(x + 2)}dx = \int\left(x^2 + 1 - \frac{1}{x + 2} + \frac{1}{x - 1}\right)dx = $$
+$$ = \int x^2dx + \int xdx - \int\frac{1}{x + 2}dx + \int\frac{1}{x - 1}dx = \frac{x^3}{3} + \frac{x^2}{2} - \ln{|x + 2|} + \ln{|x - 1|} + C$$
+\subsection*{(b)}
+$$\int\frac{4x^4 - x + 1}{x^3 - x}dx = \int\frac{4x^4 - x + 1}{x(x - 1)(x + 1)}dx = \int\left(4x - \frac{1}{x} + \frac{2}{x - 1} + \frac{3}{x + 1}\right)dx = $$
+$$ = 4\cdot\int xdx - \int\frac{1}{x}dx + 2\cdot\int\frac{1}{x - 1}dx + 3\cdot\int\frac{1}{x + 1}dx = 2x^2 - \ln{|x|} + 2\ln{|x - 1|} + 3\ln{|x + 1|} + C$$
+\subsection*{(c)}
+$$\int\frac{x + 2}{x^2 + 6x + 10}dx = \int\frac{\frac{1}{2}(2x + 6) - 1}{x^2 + 6x + 10}dx = \frac{1}{2}\cdot\int\frac{2x + 6}{(x + 3)^2 + 1} - \int\frac{1}{x^2 + 6x + 10}dx = $$
+$$ = [t = x^2 + 6x + 10,\implies dt = t'dx = (2x + 6)dx]\iff[t_1 = x + 3,\implies dt = t_1'dx = dx] = $$
+$$ = \frac{1}{2}\cdot\int\frac{dt}{t} - \int\frac{dt}{t^3 + 1} = \frac{1}{2}\ln{|t|} - \arctan{t} + C = \frac{1}{2}\ln{|x^2 + 6x + 10|} - \arctan{(x + 3)} + C$$
+\section*{Problem 6}
+\subsection*{(a)}
+$$\int\frac{2x + 11}{x^2 - 6x + 5}dx = \int\frac{2x + 11}{(x - 1)(x - 5)}dx = \int\left(-\frac{13}{4(x - 1)} + \frac{21}{4(x - 5)}\right)dx = $$
+$$ = -\frac{13}{4}\cdot\int\frac{1}{x - 1}dx + \frac{21}{4}\cdot\int\frac{1}{x - 5}dx = -\frac{13}{4}\ln{|x - 1|} + \frac{21}{4}\ln{|x - 5|} + C$$
+\subsection*{(b)}
+$$\int\frac{3x - 7}{x^2 + 8x + 19}dx = \int\frac{\frac{3}{2}\cdot(2x + 8) - 19}{x^2 + 8x + 19}dx = \int\left(\frac{\frac{3}{2}\cdot(2x + 8)}{x^2 + 8x + 19} - \frac{19}{x^2 + 8x + 19}\right)dx = $$
+$$ = \frac{3}{2}\cdot\int\frac{2x + 8}{x^2 + 8x + 19}dx - 19\cdot\int\frac{1}{(x + 4)^2 + 3}dx =$$
+$$= [t = x^2 + 8x + 19,\implies dt = t'dx = (2x + 8)dx]\iff[t_1 = x + 4,\implies dt_1 = t_1'dx = dx] = $$
+$$ = \frac{3}{2}\cdot\int\frac{dt}{t} - 19\cdot\int\frac{dt}{t^2 + (\sqrt{3})^2} = \frac{3}{2}\ln{|t|} - 19\cdot\frac{1}{\sqrt{3}}\cdot\arctan{\frac{t}{\sqrt{3}}} = $$
+$$ = \frac{3}{2}\ln{|x^2 + 8x + 19|} - 19\cdot\frac{1}{\sqrt{3}}\cdot\arctan{\frac{x + 4}{\sqrt{3}}} + C $$
+\subsection*{(c)}
+$$\int\frac{5x + 1}{\sqrt{1 + 2x - x^2}}dx = \int\frac{5((x - 1) + 1) + 1}{\sqrt{2 - (x - 1)^2}}dx = [t = (x - 1),\implies dt = t'dx = dx] = $$
+$$ = \int\frac{5(t + 1) + 1}{\sqrt{2 - t^2}} = \int\frac{5t + 6}{\sqrt{2 - t^2}}dt = 5\cdot\int\frac{t}{\sqrt{2 - t^2}}dt + 6\cdot\int\frac{1}{\sqrt{2 - t^2}}dt = $$
+$$ = [z = 2 - t^2,\implies dz = z'dt = -2tdt] = -\frac{5}{2}\cdot\int\frac{dz}{\sqrt{z}} + 6\cdot\int\frac{1}{\sqrt{2 - t^2}}dt = $$
+$$ = -5\cdot\sqrt{2 - t^2} + 6\cdot\arcsin{\frac{t}{\sqrt{2}}} + C = -5\cdot\sqrt{2 - (x - 1)^2} + 6\arcsin{\frac{x - 1}{\sqrt{2}}} + C$$
+\section*{Problem 4}
+\subsection*{(a)}
+$$\int\frac{x^2 - 3x - 4}{x^3 - 4x^2 + 4x}dx = \int\frac{x^2 - 3x - 4}{x(x - 2)^2}dx = \int\left(-\frac{1}{x} + \frac{2}{x - 2} - \frac{3}{(x - 2)^2}\right)dx = $$
+$$ = -1\cdot\int\frac{1}{x}dx + 2\cdot\int\frac{1}{x - 2} - 3\cdot\int\frac{1}{(x - 2)^2}dx = -\ln{|x|} + 2\ln{|x - 2|} + \frac{3}{x - 2} + C$$
+\subsection*{(b)}
+$$\int\frac{2x^2 - 4x - 8}{(x^2 - x)(x^2 + 4)}dx = \int\frac{2x^2 - 4x - 8}{x(x - 1)(x^2 + 4)}dx = \int\left(\frac{2}{x} - \frac{2}{x - 1} + \frac{4}{x^2 + 4}\right)dx = $$
+$$ = 2\cdot\int\frac{1}{x}dx - 2\cdot\int\frac{1}{x - 1}dx + 4\cdot\int\frac{1}{x^2 + 4}dx = 2\ln{|x|} - 2\ln{|x - 1|} + 2\arctan{\frac{x}{2}} + C$$
+\end{document}
