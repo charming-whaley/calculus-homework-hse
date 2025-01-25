@@ -1,4 +1,4 @@
-# ⟨Calculus homework⟩
+# Calculus homework
 
 <p>Here I share all calculus homework for second semester at HSE University's DSBA FCS program. It may change in the future, so do not hesitate to go to do it yourself ;)</p>
 
