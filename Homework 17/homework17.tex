@@ -1,0 +1,53 @@
+\documentclass{article}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{semantic}
+\usepackage[margin=1in]{geometry}
+\usepackage{fancyhdr}
+\usepackage{enumerate}
+\usepackage[shortlabels]{enumitem}
+\usepackage{systeme}
+
+\pagestyle{fancy}
+\fancyhead[L]{Katkov Fedor}
+\fancyhead[C]{Calculus homework 17}
+\fancyhead[R]{\today}
+
+\begin{document}
+\section*{Problem 2}
+\section*{(a)}
+$$\int\left[(x^2 + 3x + 2)\cos{4x}\right]dx\implies[U = (x^2 + 3x + 2), dU = (2x + 3)dx\iff dV = \cos{4x}dx, V = \frac{\sin{4x}}{4}]\implies$$
+$$\implies\frac{1}{4}(x^2 + 3x + 2)\sin{4x} - \frac{1}{4}\cdot\int\left[\sin{4x}(2x + 3)\right]dx\implies$$
+$$\implies[U = 2x + 3, dU = 2dx\iff dV = \sin{4x}dx, V = -\frac{1}{4}\cos{4x}]\implies$$
+$$\implies\frac{1}{4}(x^2 + 3x + 2)\sin{4x} - \frac{1}{4}\cdot\left(-\frac{1}{4}(2x + 3)\cos{4x} + \frac{1}{2}\int\left[\cos{4x}\right]dx\right) = $$
+$$=\frac{1}{4}(x^2 + 3x + 2)\sin{4x} - \frac{1}{4}\cdot\left(-\frac{1}{4}(2x + 3)\cos{4x} + \frac{1}{8}\sin{4x}\right) + C\in\mathbb{R}$$
+\section*{(b)}
+$$\int\left[\frac{x}{\cos^2{x}}\right]dx\implies [U = x, dU = dx\iff dV = \frac{1}{\cos^2{x}}dx, V = \tan{x}]\implies x\cdot\tan{x} - \int\left[\tan{x}\right]dx = $$
+$$ = x\cdot\tan{x} + \ln{|\cos{x}|} + C\in\mathbb{R}$$ %% If I will not be lazy, I solve the integral of tanx
+\section*{(c)}
+$$\int\left[x\ln{(x + 1)}\right]dx\implies [U = \ln{(x + 1)}, dU = \frac{1}{x + 1}dx\iff dV = xdx, V = \frac{x^2}{2}]\implies$$
+$$\implies\frac{x^2\ln{(x + 1)}}{2} - \frac{1}{2}\int\left[\frac{x^2}{x + 1}\right]dx\implies -\frac{1}{2}\cdot\int\left[\frac{x^2}{x + 1}\right]dx = [t = x + 1, dt = dx] = -\frac{1}{2}\cdot\int\left[\frac{(t - 1)^2}{t}\right]dt = $$
+$$ = -\frac{1}{2}\cdot\int\left[t - 2 + \frac{1}{t}\right]dt = \frac{-x^2 + 2x + 3}{4} - \frac{\ln{|x + 1|}}{2} + C\in\mathbb{R}\implies$$
+$$\implies \frac{x^2\ln{(x + 1)}}{2} + \frac{-x^2 + 2x + 3}{4} - \frac{\ln{|x + 1|}}{2} + C\in\mathbb{R}$$
+\section*{(d)}
+$$\int\left[\frac{\arcsin{\sqrt{x}}}{\sqrt{1 - x}}\right]dx\implies[U = \arcsin{\sqrt{x}}, dU = \frac{1}{2\sqrt{x}\sqrt{1 - x}}\iff dV = \frac{1}{\sqrt{1 - x}}dx, V = -2\sqrt{1 - x}]\implies$$
+$$\implies-2\sqrt{1 - x}\arcsin{\sqrt{x}} + \int\left[\frac{1}{\sqrt{x}}\right]dx = -2\sqrt{1 - x}\arcsin{\sqrt{x}} + 2\sqrt{x} + C\in\mathbb{R}$$
+\section*{(e)}
+$$\int\left[\arctan{x}\right]dx\implies[U = \arctan{x}, dU = \frac{1}{1 + x^2}dx\iff dV = dx, V = x]\implies x\arctan{x} - \int\left[\frac{x}{x^2 + 1}\right]dx\implies$$
+$$\implies\int\left[\frac{x}{x^2 + 1}\right]dx = [t = x^2 + 1, dt = 2x] = -\frac{1}{2}\cdot\int\left[\frac{1}{t}\right]dt= -\frac{\ln{|x^2 + 1|}}{2} + C\in\mathbb{R}\implies$$
+$$\implies x\arctan{x}-\frac{\ln{|x^2 + 1|}}{2} + C\in\mathbb{R}$$
+\section*{(g)}
+$$\int\left[\exp{(2x)}\cdot\sin{(3x)}\right]dx\implies[U = \sin{3x}, dU = 3\cos{3x}dx\iff dV = \exp{(2x)}dx, V = \frac{\exp{(2x)}}{2}]\implies$$
+$$\implies\frac{\exp{(2x)}\cdot\sin{3x}}{2} - \frac{3}{2}\int\left[\exp{(2x)}\cdot\cos{3x}\right]dx\implies$$
+$$\implies[U = \cos{3x}, dU = -3\sin{3x}dx\iff dV = \exp{(2x)dx, V = \frac{\exp{(2x)}}{2}}]\implies$$
+$$\implies\frac{\exp{(2x)}\cdot\sin{3x}}{2} - \frac{3}{2}\cdot\left(\frac{\exp{(2x)\cdot\cos{3x}}}{2} + \frac{3}{2}\cdot\int\left[\exp{(2x)}\cdot\sin{3x}\right]dx\right)\implies[I = \int\left[\exp{(2x)}\cdot\sin{3x}\right]dx]\implies$$
+$$\implies I = \frac{\exp{(2x)}\cdot\sin{3x}}{2} - \frac{3}{2}\cdot\left(\frac{\exp{(2x)\cdot\cos{3x}}}{2} + \frac{3}{2}\cdot I\right) = \frac{\exp{(2x)}\cdot\sin{3x}}{2} - \frac{3\exp{(2x)\cdot\cos{3x}}}{4} - \frac{13}{4}I\implies$$
+$$\implies I = \frac{4}{13}\cdot\left(\frac{\exp{(2x)}\cdot\sin{3x}}{2} - \frac{3\exp{(2x)\cdot\cos{3x}}}{4}\right) + C\in\mathbb{R}$$
+\section*{Problem 4}
+\subsection*{(a)}
+$$\int\left[\frac{\ln{\ln{x}}}{x}\right]dx\implies[U = \ln{\ln{x}}, dU = \frac{1}{x\ln{x}}\cdot dx\iff dV = \frac{dx}{x}, V = \ln{x}]\implies$$
+$$\implies\ln{\ln{x}}\cdot\ln{x} - \int\left[\frac{1}{x}\right]dx = \ln{\ln{x}}\cdot\ln{x} - \ln{|x|} + C\in\mathbb{R}$$
+\subsection*{(b)}
+$$\int\left[\frac{x}{1 + x^4}\right]dx\implies[t = 1 + x^4,\implies dt = 4x^3dx]\implies \frac{1}{4}\cdot\int\left[\frac{1}{t}\right]dt = \frac{1}{4}\cdot\ln{|t|} + C = \frac{1}{4}\cdot\ln{|1 + x^4|} + C\in\mathbb{R}$$
+\end{document}
